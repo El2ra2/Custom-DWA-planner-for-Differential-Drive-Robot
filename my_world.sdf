@@ -1,0 +1,457 @@
+<sdf version='1.6'>
+  <world name='my_world'>
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+
+        <light type="directional" name="sun">
+            <cast_shadows>true</cast_shadows>
+            <pose>0 0 10 0 0 0</pose>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+            <attenuation>
+                <range>1000</range>
+                <constant>0.9</constant>
+                <linear>0.01</linear>
+                <quadratic>0.001</quadratic>
+            </attenuation>
+            <direction>-0.5 0.1 -0.9</direction>
+        </light>
+
+        <model name="ground_plane">
+            <static>true</static>
+            <link name="link">
+                <collision name="collision">
+                <geometry>
+                    <plane>
+                    <normal>0 0 1</normal>
+                    </plane>
+                </geometry>
+                </collision>
+                <visual name="visual">
+                <geometry>
+                    <plane>
+                    <normal>0 0 1</normal>
+                    <size>15 15</size>
+                    </plane>
+                </geometry>
+                <material>
+                    <ambient>0.8 0.8 0.8 1</ambient>
+                    <diffuse>0.8 0.8 0.8 1</diffuse>
+                    <specular>0.8 0.8 0.8 1</specular>
+                </material>
+                </visual>
+            </link>
+        </model>
+
+    <!-- walls -->
+    
+    <model name='wall_1'>
+    <static>true</static>
+    <pose>7.25 -0.25 1 0 0 0</pose><!--pose relative to the world-->
+    <link name='box'>
+        <visual name='visual'>
+            <geometry>
+                <box>
+                    <size>0.5 14.5 2.0</size>
+                </box>
+            </geometry>
+            <!--let's add color to our link-->
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>1 0 0 1</specular>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>0.5 14.5 2.0</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+</model>
+
+
+<model name='wall_2'>
+    <static>true</static>
+    <pose>-7.25 0.25 1 0 0 0</pose><!--pose relative to the world-->
+    <link name='box'>
+        <visual name='visual'>
+            <geometry>
+                <box>
+                    <size>0.5 14.5 2.0</size>
+                </box>
+            </geometry>
+            <!--let's add color to our link-->
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>1 0 0 1</specular>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>0.5 14.5 2.0</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+</model>
+
+
+<model name='wall_3'>
+    <static>true</static>
+    <pose>0.25 7.25 1 0 0 0</pose><!--pose relative to the world-->
+    <link name='box'>
+        <visual name='visual'>
+            <geometry>
+                <box>
+                    <size>14.5 0.5 2.0</size>
+                </box>
+            </geometry>
+            <!--let's add color to our link-->
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>1 0 0 1</specular>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>14.5 0.5 2.0</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+</model>
+
+
+
+<model name='wall_4_a'>
+    <static>true</static>
+    <pose>4.5 -7.25 1 0 0 0</pose><!--pose relative to the world-->
+    <link name='box'>
+        <visual name='visual'>
+            <geometry>
+                <box>
+                    <size>5 0.5 2.0</size>
+                </box>
+            </geometry>
+            <!--let's add color to our link-->
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>1 0 0 1</specular>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>5 0.5 2.0</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+</model>
+
+
+
+<model name='wall_4_b'>
+    <static>true</static>
+    <pose>-5 -7.25 1 0 0 0</pose><!--pose relative to the world-->
+    <link name='box'>
+        <visual name='visual'>
+            <geometry>
+                <box>
+                    <size>5 0.5 2.0</size>
+                </box>
+            </geometry>
+            <!--let's add color to our link-->
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>1 0 0 1</specular>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>5 0.5 2.0</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+</model>
+
+
+<model name='wall_4_c'>
+    <static>true</static>
+    <pose>1.75 -6 1 0 0 0</pose><!--pose relative to the world-->
+    <link name='box'>
+        <visual name='visual'>
+            <geometry>
+                <box>
+                    <size>0.5 3 2.0</size>
+                </box>
+            </geometry>
+            <!--let's add color to our link-->
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>1 0 0 1</specular>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>0.5 3 2.0</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+</model>
+
+
+
+<model name='wall_4_d'>
+    <static>true</static>
+    <pose>-2.25 -6 1 0 0 0</pose><!--pose relative to the world-->
+    <link name='box'>
+        <visual name='visual'>
+            <geometry>
+                <box>
+                    <size>0.5 3 2.0</size>
+                </box>
+            </geometry>
+            <!--let's add color to our link-->
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>1 0 0 1</specular>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>0.5 3 2.0</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+</model>
+
+
+
+<model name='wall_4_e'>
+    <static>true</static>
+    <pose>-0.25 -4.75 1 0 0 0</pose><!--pose relative to the world-->
+    <link name='box'>
+        <visual name='visual'>
+            <geometry>
+                <box>
+                    <size>3.5 0.5 2.0</size>
+                </box>
+            </geometry>
+            <!--let's add color to our link-->
+            <material>
+                <ambient>1 0 0 1</ambient>
+                <diffuse>1 0 0 1</diffuse>
+                <specular>1 0 0 1</specular>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>3.5 0.5 2.0</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+</model>
+
+
+
+
+<model name='obstacle_1'>
+    <static>true</static>
+    <pose>-5 4 0.3 0 0 1.5</pose>
+    <link name='box'>
+        <visual name='visual'>
+            <geometry>
+                <box>
+                    <size>0.3 0.3 0.75</size>
+                </box>
+            </geometry>
+            <!--let's add color to our link-->
+            <material>
+                <ambient>0.87 0.26 0.07 1</ambient>
+                <diffuse>0.87 0.26 0.07 1</diffuse>
+                <specular>0.87 0.26 0.07 1</specular>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>0.3 0.3 0.75</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+</model>
+
+
+
+
+
+
+
+<model name='obstacle_2'>
+    <static>true</static>
+    <pose> 3 -2 0.3 0 0 2.3</pose>
+    <link name='box'>
+        <visual name='visual'>
+            <geometry>
+                <box>
+                    <size>0.3 0.3 0.75</size>
+                </box>
+            </geometry>
+            <!--let's add color to our link-->
+            <material>
+                <ambient>0.87 0.26 0.07 1</ambient>
+                <diffuse>0.87 0.26 0.07 1</diffuse>
+                <specular>0.87 0.26 0.07 1</specular>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>0.3 0.3 0.75</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+</model>
+
+
+<model name='obstacle_3'>
+    <static>true</static>
+    <pose>5 -5 0.3 0 0 3.8</pose>
+    <link name='box'>
+        <visual name='visual'>
+            <geometry>
+                <box>
+                    <size>0.3 0.3 0.75</size>
+                </box>
+            </geometry>
+            <!--let's add color to our link-->
+            <material>
+                <ambient>0.87 0.26 0.07 1</ambient>
+                <diffuse>0.87 0.26 0.07 1</diffuse>
+                <specular>0.87 0.26 0.07 1</specular>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>0.3 0.3 0.75</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+</model>
+
+
+
+<model name='obstacle_4'>
+    <static>true</static>
+    <pose>-2 -2 0.3 0 0 1.1</pose>
+    <link name='box'>
+        <visual name='visual'>
+            <geometry>
+                <box>
+                    <size>0.3 0.3 0.75</size>
+                </box>
+            </geometry>
+            <!--let's add color to our link-->
+            <material>
+                <ambient>0.87 0.26 0.07 1</ambient>
+                <diffuse>0.87 0.26 0.07 1</diffuse>
+                <specular>0.87 0.26 0.07 1</specular>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>0.3 0.3 0.75</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+</model>
+
+
+
+<model name='obstacle_5'>
+    <static>true</static>
+    <pose>-2 2 0.3 0 0 4.3</pose>
+    <link name='box'>
+        <visual name='visual'>
+            <geometry>
+                <box>
+                    <size>0.3 0.3 0.75</size>
+                </box>
+            </geometry>
+            <!--let's add color to our link-->
+            <material>
+                <ambient>0.87 0.26 0.07 1</ambient>
+                <diffuse>0.87 0.26 0.07 1</diffuse>
+                <specular>0.87 0.26 0.07 1</specular>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>0.3 0.3 0.75</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+</model>
+
+
+<model name='obstacle_6'>
+    <static>true</static>
+    <pose>1.5 1.5 0.3 0 0 4.3</pose>
+    <link name='box'>
+        <visual name='visual'>
+            <geometry>
+                <box>
+                    <size>0.3 0.3 0.75</size>
+                </box>
+            </geometry>
+            <!--let's add color to our link-->
+            <material>
+                <ambient>0.87 0.26 0.07 1</ambient>
+                <diffuse>0.87 0.26 0.07 1</diffuse>
+                <specular>0.87 0.26 0.07 1</specular>
+            </material>
+        </visual>
+        <collision name='collision'>
+            <geometry>
+                <box>
+                    <size>0.3 0.3 0.75</size>
+                </box>
+            </geometry>
+        </collision>
+    </link>
+</model>
+
+
+    </world>
+</sdf>
