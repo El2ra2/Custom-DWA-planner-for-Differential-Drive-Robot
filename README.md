@@ -1,30 +1,27 @@
-# Custom-DWA-planner-for-Differential-Drive-Robot
-Implemented a custom Dynamic Window Approach (DWA) local planner for a TurtleBot in Gazebo using ROS2 Humble.
+# Custom Dynamic Window Approach based local path planner used by a Differential Drive Robot in custom world
 
-SETUP INSTRUCTIONS-
+This is a custom Dynamic Window Approach (DWA) local planner for a TurtleBot in Gazebo Classic using ROS2 Humble.
 
--Paste the files in the base directory
+## Pre-requisites:
+- Installed ROS2 Humble and Gazebo Classic. Use official sites.
 
--Go to dwa_custom/src/ in the terminal
+Gazebo - https://classic.gazebosim.org/tutorials?tut=install_ubuntu&cat=install
 
--In the terminal, execute:
-  colcon build
-  
--source the workspace, execute:
-  source install/local_setup.bash
-  
--Now execute:
-  ros2 run my_dwa_planner dwa_node
-  
--In a new terminal, execute:
-  ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py 
-  
-  (in case you havent downloaded turtlebot3, first execute: sudo apt install ros-humble-turtlebot3*)
-  
--In another new terminal, execute:
-  rviz2
-  
--In rviz, File -> open config, direct to rviz_config.rviz in my_dwa_planner/src/rviz_config
+ROS2 Humble - https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html
 
-- Now to use '2D Goal Pose' in Rviz window to create a goal pose, which the turtlebot will move to using the DWA local planner
+
+- Turtlebot3 waffle needs to be installed and sourced. 
+
+Turtlebot3 - https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/#download-and-install-ubuntu-on-pc
+
+After installing turtlebot3, paste the (command: export TURTLEBOT3_MODEL=waffle)
+
+
+## SETUP INSTRUCTIONS-
+
+-After downloading and extracting, go to root directory 'planner_ws' and use (command: colcon build --symlink-install)
+
+- Now use the launch file (command: ros2 launch dwa_planner display.launch.py). This will open Gazebo, Rviz, turtlebot, and the planning nodes.
+
+- Now use '2D Goal Pose' in Rviz window to create a goal pose, to which the turtlebot will move, using the DWA local planner.
 
