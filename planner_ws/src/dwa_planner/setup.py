@@ -19,8 +19,6 @@ setup(
 
         (os.path.join('share', package_name, 'worlds'),
             ['worlds/my_world.sdf']),
-        (os.path.join('share', package_name, 'worlds'),
-            ['worlds/my_world.world']),
 
         
     ],
