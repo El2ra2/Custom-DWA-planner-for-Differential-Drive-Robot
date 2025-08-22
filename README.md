@@ -17,7 +17,7 @@ Turtlebot3 - https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start
 After installing turtlebot3, paste the (command: export TURTLEBOT3_MODEL=waffle) in your bash file '.bashrc', and source it (command: source ~/.bashrc)
 
 
-## SETUP INSTRUCTIONS-
+## SETUP INSTRUCTIONS:
 
 - After downloading and extracting, go to root directory 'planner_ws' and use (command: colcon build --symlink-install)
 
