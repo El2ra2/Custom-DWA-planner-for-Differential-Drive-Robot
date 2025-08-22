@@ -19,7 +19,7 @@ After installing turtlebot3, paste the (command: export TURTLEBOT3_MODEL=waffle)
 
 ## SETUP INSTRUCTIONS-
 
--After downloading and extracting, go to root directory 'planner_ws' and use (command: colcon build --symlink-install)
+- After downloading and extracting, go to root directory 'planner_ws' and use (command: colcon build --symlink-install)
 
 - Now use the launch file (command: ros2 launch dwa_planner display.launch.py). This will open Gazebo, Rviz, turtlebot, and the planning nodes.
 
