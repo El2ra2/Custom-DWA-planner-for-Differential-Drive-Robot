@@ -1,4 +1,4 @@
-# Custom Dynamic Window Approach based local path planner used by a Differential Drive Robot in custom world
+# Custom Dynamic Window Approach based local path planner, used by a Differential Drive Robot in a custom world
 
 This is a custom Dynamic Window Approach (DWA) local planner for a TurtleBot in Gazebo Classic using ROS2 Humble.
 
@@ -15,6 +15,8 @@ ROS2 Humble - https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.ht
 Turtlebot3 - https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/#download-and-install-ubuntu-on-pc
 
 After installing turtlebot3, paste the (command: export TURTLEBOT3_MODEL=waffle) in your bash file '.bashrc', and source it (command: source ~/.bashrc)
+
+- Install tf transformations (command: sudo apt install ros-humble-tf-transformations)
 
 
 ## SETUP INSTRUCTIONS:
