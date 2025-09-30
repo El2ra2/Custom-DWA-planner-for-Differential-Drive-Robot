@@ -2,6 +2,11 @@
 
 This is a custom Dynamic Window Approach (DWA) local planner for a TurtleBot in Gazebo Classic using ROS2 Humble.
 
+
+https://github.com/user-attachments/assets/11b6ae93-fb80-41c1-a3cf-609890302d6c
+
+
+
 ## Pre-requisites:
 - Installed ROS2 Humble and Gazebo Classic in Linux Ubuntu. Use official sites.
 
